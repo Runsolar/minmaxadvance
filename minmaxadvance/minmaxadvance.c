@@ -83,7 +83,6 @@ void minmaxadvance(int* array, int size) {
                 minElement = array[i];
             }
         }
-
         ++k;
 
         printf("k=%d\n", k);
@@ -105,7 +104,6 @@ void minmaxadvance(int* array, int size) {
 
         int j = size - k;
         for (int i = k; i < size - k; i++) {
-
             if (array[j - 1] > array[j]) {
                 if (j > k + 1) {
                     int tmp = array[j - 1];
@@ -114,7 +112,6 @@ void minmaxadvance(int* array, int size) {
                 }
             }
             --j;
-
             if (array[i] > array[i + 1])
             {
                 if (i < size - k - 1) {
@@ -125,9 +122,8 @@ void minmaxadvance(int* array, int size) {
                 ++sum;
             }
         }
-
         if (sum == 0) { isSort = false; }
-
+        
         for (int i = 0; i < SIZE; i++)
         {
             printf("%d ", array[i]);
