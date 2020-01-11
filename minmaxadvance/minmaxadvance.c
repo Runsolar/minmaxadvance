@@ -15,7 +15,7 @@ void minmaxadvance(int* array, int size) {
     int k = 0;
     bool isSort = true;
 
-/* Uncomment it below if you wanna more fast but it takes O(N) of memmory. */
+/* Uncomment it below if you wanna more fast but it takes O(N) of memory. */
 /*
     int *tmparray = (int *)malloc(size * sizeof(int));
     memcpy(tmparray, array, size * sizeof(int));
