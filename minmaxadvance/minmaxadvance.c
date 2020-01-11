@@ -13,7 +13,7 @@ License: GNU GPL.
 #include <stdbool.h>
 
 //For tests
-#define SIZE 20
+#define SIZE 10
 
 void minmaxadvance(int* array, int size) {
     int k = 0;
@@ -103,9 +103,25 @@ void minmaxadvance(int* array, int size) {
             array[indexOfMax] = tempMinBreemElement;
         }
 
+        int j = size - k;
         for (int i = k; i < size - k; i++) {
+
+            if (array[j - 1] > array[j]) {
+                if (j > k + 1) {
+                    int tmp = array[j - 1];
+                    array[j - 1] = array[j];
+                    array[j] = tmp;
+                }
+            }
+            --j;
+
             if (array[i] > array[i + 1])
             {
+                if (i < size - k - 1) {
+                    int tmp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = tmp;
+                }
                 ++sum;
             }
         }
@@ -131,5 +147,8 @@ int main()
     int arr4[] = { 1, 2, 3, 4, 6, 5, 7, 8, 9, 10 };
     int arr5[] = { 5, 2, 3, 4, 1, 10, 7, 8, 9, 6 };
 
-    minmaxadvance(arr2, SIZE);
+    int arr6[SIZE];
+    for(int i=0; i < SIZE; i++) arr6[i] = 0 + rand() % 101;
+
+    minmaxadvance(arr3, SIZE);
 }
