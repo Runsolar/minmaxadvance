@@ -2,7 +2,7 @@
 minmaxadvance.c
 This is an implementation of the MinMax (selection sort) like of the sort algorithm which mixed with the bubble sort. 
 It is just a main idea, you might it change as you like ;).
-Asymptotics ops O(N^2)-O(N*LogN). 
+Asymptotics O(N^2)-O(N*LogN). 
 
 Code by D.Wolf, 2020, https://github.com/Runsolar/minmaxadvance
 License: GNU GPL.
@@ -19,7 +19,7 @@ void minmaxadvance(int* array, int size) {
     int k = 0;
     bool isSort = true;
 
-/* Uncomment it below if you wanna more fast but it takes O(N) of memory. */
+/* Uncomment it below if you wanna N*LogN but it takes O(N) of memory. */
 /*
     int *tmparray = (int *)malloc(size * sizeof(int));
     memcpy(tmparray, array, size * sizeof(int));
