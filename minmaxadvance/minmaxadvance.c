@@ -11,6 +11,7 @@ License: GNU GPL.
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 
 //For tests
 #define SIZE 10
@@ -136,6 +137,7 @@ void minmaxadvance(int* array, int size) {
 
 int main()
 {
+    srand(time(NULL));
     //Some tests
     int arr1[] = { 20, 5, 15, 17, 8, 15, 4, 3, 6, 12 }; //10
     int arr2[] = { 20, 5, 15, 17, 8, 15, 4, 3, 6, 12, 21, 30, 1, 2, 3, 5, 1, 3, 0, 7 }; //20
