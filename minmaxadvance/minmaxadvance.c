@@ -1,6 +1,6 @@
 /*
 minmaxadvance.c
-This is an implementation of the MinMax (selection sort) like of the sort algorithm which mixed with the bubble sort. 
+This is an implementation of the MinMax (selection sort) like of the sort algorithm which mixed with the Comb sort and Shaker sort algorithms
 It is just a main idea, you might it change as you like ;).
 Asymptotics [O(N*LogN),...,O(N^2)]. 
 
@@ -14,7 +14,7 @@ License: GNU GPL.
 #include <time.h>
 
 //For tests
-#define SIZE 10
+#define SIZE 100
 
 void minmaxadvance(int* array, int size) {
     int k = 0;
@@ -148,5 +148,5 @@ int main()
     int arr6[SIZE];
     for(int i=0; i < SIZE; i++) arr6[i] = 0 + rand() % 101;
 
-    minmaxadvance(arr3, SIZE);
+    minmaxadvance(arr6, SIZE);
 }
