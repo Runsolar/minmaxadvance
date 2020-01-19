@@ -64,11 +64,12 @@ void minmaxadvance(int* array, int size) {
         int minElement = array[k];
         int maxElement = array[k];
 
-        for (int i = k; i < size - k; ++i)
+        int j = size - k - 1;
+        for (int i = k, tmp; i < size - k; ++i)
         {
             if (i < size - k - 1) {
                 if (array[i] > array[i + 1]) {
-                    int tmp = array[i];
+                    tmp = array[i];
                     array[i] = array[i + 1];
                     array[i + 1] = tmp;
                 }
@@ -103,11 +104,11 @@ void minmaxadvance(int* array, int size) {
             array[indexOfMax] = tempMinBreemElement;
         }
 
-        int j = size - k;
-        for (int i = k; i < size - k; i++) {
+        j = size - k;
+        for (int i = k, tmp; i < size - k; i++) {
             if (array[j - 1] > array[j]) {
                 if (j > k + 1) {
-                    int tmp = array[j - 1];
+                    tmp = array[j - 1];
                     array[j - 1] = array[j];
                     array[j] = tmp;
                 }
@@ -116,7 +117,7 @@ void minmaxadvance(int* array, int size) {
             if (array[i] > array[i + 1])
             {
                 if (i < size - k - 1) {
-                    int tmp = array[i];
+                    tmp = array[i];
                     array[i] = array[i + 1];
                     array[i + 1] = tmp;
                 }
@@ -146,7 +147,7 @@ int main()
     int arr5[] = { 5, 2, 3, 4, 1, 10, 7, 8, 9, 6 };
 
     int arr6[SIZE];
-    for(int i=0; i < SIZE; i++) arr6[i] = 0 + rand() % 101;
+    for(int i=0; i < SIZE; i++) arr6[i] = 1 + rand() % 101;
 
     minmaxadvance(arr6, SIZE);
 }
